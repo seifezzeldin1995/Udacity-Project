@@ -9,3 +9,4 @@ export AWS_REGION=us-east-1
 export AWS_PROFILE=default
 export JWT_SECRET=testing
 export URL=http://localhost:8100
+export NODE_OPTIONS=--max_old_space_size=4096
