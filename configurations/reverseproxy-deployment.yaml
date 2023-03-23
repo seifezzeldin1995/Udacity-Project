@@ -31,7 +31,7 @@ spec:
           - secretRef:
               name: env-secret
           - configMapRef:
-              name: env-config
+              name: env-configmap
           - secretRef:
               name: aws-secret
         ports:
