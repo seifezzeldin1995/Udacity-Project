@@ -36,3 +36,4 @@ spec:
               name: aws-secret
         ports:
           - containerPort: 8080
+      restartPolicy: Always
