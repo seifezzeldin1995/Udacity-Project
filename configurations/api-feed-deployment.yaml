@@ -10,7 +10,6 @@ spec:
   selector:
     matchLabels:
       app: api-feed
-
   template:
     metadata:
       labels:
@@ -22,11 +21,11 @@ spec:
         imagePullPolicy: Always
         resources:
           requests:
-            memory: "400Mi"
+            memory: "1024Mi"
             cpu: "400m"
           limits:
-            memory: "1024Mi"
-            cpu: "500m"
+            memory: "2048Mi"
+            cpu: "1000m"
         envFrom:
           - secretRef:
               name: env-secret
@@ -35,4 +34,13 @@ spec:
           - secretRef:
               name: aws-secret
         ports:
-          - containerPort: 8080
+          - containerPort: 8080   
+        volumeMounts:
+        - name: aws-secret
+          mountPath: "/root/.aws/"
+          readOnly: true        
+      restartPolicy: Always
+      volumes:
+      - name: aws-secret
+        secret:
+          secretName: aws-secret       
