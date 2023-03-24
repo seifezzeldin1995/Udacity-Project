@@ -8,4 +8,4 @@ data:
   aws_bucket: test-dev-2022
   aws_region: us-east-1
   aws_profile: default
-  URL: http://localhost:8100
+  URL: http://a89e19233c7ae4271832f4449c910b47-405153774.us-east-1.elb.amazonaws.com:8100

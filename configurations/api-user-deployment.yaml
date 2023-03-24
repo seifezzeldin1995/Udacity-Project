@@ -22,11 +22,11 @@ spec:
         imagePullPolicy: Always
         resources:
           requests:
-            memory: "500Mi"
-            cpu: "400m"
-          limits:
             memory: "1024Mi"
-            cpu: "500m"
+            cpu: "100m"
+          limits:
+            memory: "2048Mi"
+            cpu: "1000m"
         envFrom:
           - secretRef:
               name: env-secret
